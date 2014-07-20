@@ -1,5 +1,5 @@
 require 'rspec'
-require 'pronto/haml_lint'
+require 'pronto/haml'
 
 RSpec.configure do |config|
   config.color_enabled = true
