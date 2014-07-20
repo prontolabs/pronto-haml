@@ -10,7 +10,9 @@ Gem::Specification.new do |s|
   s.author      = 'Mindaugas Mozūras'
   s.email       = 'mindaugas.mozuras@gmail.com'
   s.homepage    = 'http://github.org/mmozuras/pronto-haml'
-  s.summary     = 'Pronto runner for HAML-Lint, tool for writing clean and consistent HAML'
+  s.summary     = <<-EOF
+    Pronto runner for HAML-Lint, tool for writing clean and consistent HAML
+  EOF
 
   s.required_rubygems_version = '>= 1.3.6'
   s.license = 'MIT'
