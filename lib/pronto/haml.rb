@@ -10,8 +10,10 @@ module Pronto
     def run(patches, _)
       return [] unless patches
 
-      valid_patches = patches.select { |patch| patch.additions > 0 }
-      valid_patches.map { |patch| inspect(patch) }.flatten.compact
+      patches.select { |patch| patch.additions > 0 }.
+        select { |patch| haml_file?(patch.new_file_full_path) }.
+        map { |patch| inspect(patch) }.
+        flatten.compact
     end
 
     def inspect(patch)
@@ -25,6 +27,12 @@ module Pronto
     def new_message(lint, line)
       path = line.patch.delta.new_file[:path]
       Message.new(path, line, lint.severity, lint.message)
+    end
+
+    private
+
+    def haml_file?(path)
+      File.extname(path) == '.haml'
     end
   end
 end
