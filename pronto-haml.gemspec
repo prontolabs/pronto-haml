@@ -1,7 +1,8 @@
 # -*- encoding: utf-8 -*-
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'pronto/haml/version'
+require 'English'
 
 Gem::Specification.new do |s|
   s.name = 'pronto-haml'
@@ -14,11 +15,23 @@ Gem::Specification.new do |s|
     Pronto runner for HAML-Lint, tool for writing clean and consistent HAML
   EOF
 
-  s.required_rubygems_version = '>= 1.3.6'
-  s.license = 'MIT'
+  s.licenses = ['MIT']
+  s.required_ruby_version = '>= 1.9.3'
+  s.rubygems_version = '1.8.23'
 
-  s.files = Dir.glob('{lib}/**/*') + %w(LICENSE README.md)
-  s.test_files = `git ls-files -- {spec}/*`.split("\n")
+  s.files = `git ls-files`.split($RS).reject do |file|
+    file =~ %r{^(?:
+    spec/.*
+    |Gemfile
+    |Rakefile
+    |\.rspec
+    |\.gitignore
+    |\.rubocop.yml
+    |\.travis.yml
+    )$}x
+  end
+  s.test_files = []
+  s.extra_rdoc_files = ['LICENSE', 'README.md']
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'haml_lint', '~> 0.15.0'
