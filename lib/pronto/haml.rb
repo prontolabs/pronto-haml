@@ -26,7 +26,7 @@ module Pronto
 
     def new_message(lint, line)
       path = line.patch.delta.new_file[:path]
-      Message.new(path, line, lint.severity, lint.message)
+      Message.new(path, line, lint.severity, lint.message, nil, self.class)
     end
 
     private
