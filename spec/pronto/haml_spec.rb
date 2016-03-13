@@ -2,13 +2,13 @@ require 'spec_helper'
 
 module Pronto
   describe Haml do
-    let(:haml) { Haml.new }
+    let(:haml) { Haml.new(patches) }
+    let(:patches) { nil }
 
     describe '#run' do
-      subject { haml.run(patches, nil) }
+      subject { haml.run }
 
       context 'patches are nil' do
-        let(:patches) { nil }
         it { should == [] }
       end
 
