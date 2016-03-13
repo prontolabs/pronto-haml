@@ -3,14 +3,16 @@ require 'haml_lint'
 
 module Pronto
   class Haml < Runner
-    def initialize
+    def initialize(_, _ = nil)
+      super
+
       @runner = ::HamlLint::Runner.new
     end
 
-    def run(patches, _)
-      return [] unless patches
+    def run
+      return [] unless @patches
 
-      patches.select { |patch| patch.additions > 0 }
+      @patches.select { |patch| patch.additions > 0 }
         .select { |patch| haml_file?(patch.new_file_full_path) }
         .map { |patch| inspect(patch) }
         .flatten.compact
