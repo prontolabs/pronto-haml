@@ -5,7 +5,7 @@
 [![Gem Version](https://badge.fury.io/rb/pronto-haml.png)](http://badge.fury.io/rb/pronto-haml)
 [![Dependency Status](https://gemnasium.com/mmozuras/pronto-haml.png)](https://gemnasium.com/mmozuras/pronto-haml)
 
-Pronto runner for [HAML-Lint](https://github.com/causes/haml), tool for writing clean and consistent HAML. [What is Pronto?](https://github.com/mmozuras/pronto)
+Pronto runner for [HAML-Lint](https://github.com/brigade/haml-lint), tool for writing clean and consistent HAML. [What is Pronto?](https://github.com/mmozuras/pronto)
 
 ## Configuration
 
