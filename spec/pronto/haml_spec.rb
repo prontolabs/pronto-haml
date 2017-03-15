@@ -16,6 +16,15 @@ module Pronto
         let(:patches) { [] }
         it { should == [] }
       end
+
+      context 'patches with a one warning' do
+        include_context 'test repo'
+
+        let(:patches) { repo.diff('master') }
+
+        its(:count) { should == 1 }
+        its(:'first.msg') { should == 'Hash attribute should start with one space after the opening brace' }
+      end
     end
 
     context 'private instance methods' do
