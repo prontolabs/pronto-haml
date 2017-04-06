@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.author = 'Mindaugas Mozūras'
   s.email = 'mindaugas.mozuras@gmail.com'
-  s.homepage = 'http://github.org/mmozuras/pronto-haml'
+  s.homepage = 'http://github.com/mmozuras/pronto-haml'
   s.summary = <<-EOF
     Pronto runner for HAML-Lint, tool for writing clean and consistent HAML
   EOF
