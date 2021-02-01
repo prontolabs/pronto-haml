@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ['LICENSE', 'README.md']
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency('pronto', '~> 0.10.0')
+  s.add_runtime_dependency('pronto', '~> 0.11.0')
   s.add_runtime_dependency('haml_lint', '~> 0.23')
   s.add_runtime_dependency('rubocop', '< 1.0') # not compatible with RuboCop 1.0 yet
   s.add_development_dependency('rake', '~> 12.0')
