@@ -36,7 +36,6 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency('pronto', '~> 0.11.0')
   s.add_runtime_dependency('haml_lint', '~> 0.23')
-  s.add_runtime_dependency('rubocop', '< 1.0') # not compatible with RuboCop 1.0 yet
   s.add_development_dependency('rake', '~> 12.0')
   s.add_development_dependency('rspec', '~> 3.4')
   s.add_development_dependency('rspec-its', '~> 1.2')
